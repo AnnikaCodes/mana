@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "esbuild src/*.ts src/**/*.ts --outdir=built --platform=node --target=node18 --format=esm",
+    "start": "npm run build && node --es-module-specifier-resolution=node built/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.15.5",
+    "manifold-sdk": "^1.0.3"
+  }
+}
